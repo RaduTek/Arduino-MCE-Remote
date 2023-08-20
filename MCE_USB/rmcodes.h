@@ -57,15 +57,15 @@
 #define RM_ENTER  0xB
 
 // Key Shortcut IDs
-#define KS_PRINT    0x1
-#define KS_MCE      0x2
-#define KS_DVDMENU  0x3
-#define KS_TV       0x4
-#define KS_EPG      0x5
-#define KS_TV_REC   0x6
-#define KS_MUSIC    0x7
-#define KS_VIDEOS   0x8
-#define KS_PICTURES 0x9
+#define KS_PRINT    1
+#define KS_MCE      2
+#define KS_DVDMENU  3
+#define KS_TV       4
+#define KS_EPG      5
+#define KS_TV_REC   6
+#define KS_MUSIC    7
+#define KS_VIDEOS   8
+#define KS_PICTURES 9
 
 // Key Command Types
 #define KT_KEYBOARD 0x0
