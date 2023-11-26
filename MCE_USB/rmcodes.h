@@ -135,10 +135,11 @@ bool rm_code_to_key(uint16_t rm_code, uint8_t &shrt_code, KeyboardKeycode &keyb_
   cons_code = 0;
   switch (rm_code) {
     case RM_DVD:
-      shrt_code = KS_DVDMENU;
+      // shrt_code = KS_DVDMENU;
+      cons_code = 0x8B;
       return true;
     case RM_POWER:
-      cons_code = CONSUMER_SLEEP;
+      cons_code = CONSUMER_POWER;
       return true;
 
     case RM_RED:
@@ -158,7 +159,7 @@ bool rm_code_to_key(uint16_t rm_code, uint8_t &shrt_code, KeyboardKeycode &keyb_
       cons_code = MEDIA_RECORD;
       return true;
     case RM_PLAY:
-      cons_code = MEDIA_PAUSE;
+      cons_code = MEDIA_PAUSE;  // On Windows, this key code sends a Play action, not a Pause action.
       return true;
     case RM_PAUSE:
       cons_code = MEDIA_PLAY_PAUSE;
@@ -180,7 +181,7 @@ bool rm_code_to_key(uint16_t rm_code, uint8_t &shrt_code, KeyboardKeycode &keyb_
       return true;
       
     case RM_BACK:
-      keyb_code = KEY_BACKSPACE;
+      cons_code = CONSUMER_BROWSER_BACK;
       return true;
     case RM_INFO:
       keyb_code = KEY_MENU;
@@ -188,18 +189,23 @@ bool rm_code_to_key(uint16_t rm_code, uint8_t &shrt_code, KeyboardKeycode &keyb_
       
     case RM_UP:
       keyb_code = KEY_UP_ARROW;
+      // cons_code = 0x42;
       return true;
     case RM_DOWN:
       keyb_code = KEY_DOWN_ARROW;
+      // cons_code = 0x43;
       return true;
     case RM_LEFT:
       keyb_code = KEY_LEFT_ARROW;
+      // cons_code = 0x44;
       return true;
     case RM_RIGHT:
       keyb_code = KEY_RIGHT_ARROW;
+      // cons_code = 0x45;
       return true;
     case RM_OK:
       keyb_code = KEY_ENTER;
+      // cons_code = 0x41;
       return true;
       
     case RM_VOL_UP:
@@ -223,10 +229,12 @@ bool rm_code_to_key(uint16_t rm_code, uint8_t &shrt_code, KeyboardKeycode &keyb_
       return true;
 
     case RM_TV:
-      shrt_code = KS_TV;
+      // shrt_code = KS_TV;
+      cons_code = 0x89;
       return true;
     case RM_EPG:
-      shrt_code = KS_EPG;
+      // shrt_code = KS_EPG;
+      cons_code = 0x8D;
       return true;
     case RM_TV_REC:
       shrt_code = KS_TV_REC;
