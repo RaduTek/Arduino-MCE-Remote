@@ -22,7 +22,7 @@ void setup() {
 #endif
   IrReceiver.begin(2);
   Consumer.begin();
-  Keyboard.begin();
+  BootKeyboard.begin();
 }
 
 void loop() {
